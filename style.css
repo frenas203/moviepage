@@ -1,5 +1,18 @@
 /* style.css */
 
+:root {
+    color-scheme: dark;
+    --bg: #0f1112;
+    --bg-soft: #131617;
+    --surface: #1a1d1f;
+    --surface-elevated: #222628;
+    --text: #f2f5f6;
+    --muted: #a7b0b3;
+    --accent: #7bb7a8;
+    --accent-strong: #5aa091;
+    --shadow: rgba(6, 8, 9, 0.6);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,10 +20,12 @@
 }
 
 body {
-    font-family: "Rethink Sans", sans-serif;
-    background-color: #121212;
-    color: white;
+    font-family: "Manrope", "Rethink Sans", sans-serif;
+    background: radial-gradient(circle at top, rgba(123, 183, 168, 0.08), transparent 50%),
+                linear-gradient(180deg, var(--bg) 0%, var(--bg-soft) 100%);
+    color: var(--text);
     text-align: center;
+    min-height: 100vh;
 }
 
 h1 {
@@ -21,7 +36,7 @@ h1 {
 header {
     padding: 20px 0;
     text-align: center;
-    background: linear-gradient(135deg, #5C9F8F, #2E6356);
+    background: linear-gradient(135deg, rgba(123, 183, 168, 0.95), rgba(59, 108, 96, 0.95));
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -33,7 +48,7 @@ header img {
 }
 
 .topnav {
-    background: rgba(34, 34, 34, 0.9);
+    background: rgba(20, 23, 24, 0.9);
     padding: 15px 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(10px);
@@ -1240,7 +1255,7 @@ body.light-theme .activity-meta {
 }
 
 .topnav ul li a {
-    color: #5C9F8F;
+    color: var(--accent);
     text-decoration: none;
     padding: 12px 20px;
     display: inline-block;
@@ -1253,10 +1268,10 @@ body.light-theme .activity-meta {
 }
 
 .topnav ul li a:hover {
-    background-color: #5C9F8F;
+    background-color: var(--accent);
     color: white;
     transform: scale(1.1);
-    box-shadow: 0 4px 10px rgba(92, 159, 143, 0.5);
+    box-shadow: 0 4px 10px rgba(123, 183, 168, 0.5);
 }
 
 /* Hero Section Improvements */
@@ -1267,7 +1282,7 @@ body.light-theme .activity-meta {
     padding: 20px;
     border-radius: 15px;
     overflow: hidden;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.6));
+    background: linear-gradient(to bottom, rgba(10, 12, 13, 0.85), rgba(10, 12, 13, 0.6));
 }
 
 .hero-container .img {
@@ -1292,7 +1307,7 @@ body.light-theme .activity-meta {
 .hero-container .text h1 {
     font-size: clamp(2rem, 5vw, 3.5rem);
     margin-bottom: 20px;
-    background: linear-gradient(135deg, #5C9F8F, #2E6356);
+    background: linear-gradient(135deg, var(--accent), var(--accent-strong));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
@@ -1300,7 +1315,7 @@ body.light-theme .activity-meta {
 
 .hero-subtitle {
     font-size: clamp(1rem, 2vw, 1.4rem);
-    color: #5C9F8F;
+    color: var(--accent);
     margin-top: 15px;
     font-weight: 300;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.5);

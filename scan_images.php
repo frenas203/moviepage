@@ -143,11 +143,10 @@ $coverage = count($movies) > 0 ? (count($moviesWithImages) / count($movies)) * 1
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie Poster Scanner</title>
-    <link rel="stylesheet" href="style.css">
+<?php
+$pageTitle = 'Movie Poster Scanner';
+require_once __DIR__ . '/includes/head.php';
+?>
     <style>
         .scan-container {
             max-width: 1200px;
